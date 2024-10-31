@@ -1,22 +1,16 @@
 #include "Juego.h"
-using namespace std;
 
-Juego::Juego(const Personaje& personajePrincipal)
+Juego::Juego(shared_ptr<Personaje> personajePrincipal)
     : jugador(personajePrincipal) {}
 
+void Juego::iniciarJuego() {}
+
+void Juego::mostrarEstado() {}
+
+void Juego::actualizarJuego() {// Aquí va la lógica para actualizar el juego en cada frame
+}
+
 void Juego::agregarEnemigo(const shared_ptr<Personaje>& enemigo) {
-    enemigos.push_back(enemigo);
+    enemigos.push_back(enemigo); // Agrega un enemigo a la lista
 }
 
-void Juego::iniciarJuego() {
-    mostrarEstado(); // Agregar lógica
-}
-
-void Juego::actualizarJuego() {
-    // Interacción entre el personaje , enemigos, obstaculos, etc
-    mostrarEstado(); // Muestra el estado actual después de la interacción
-}
-
-void Juego::mostrarEstado() {
-    //Lógica mostrar el Estado (vida habilidades) en cada frame
-}

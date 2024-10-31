@@ -1,8 +1,8 @@
 #include "Personaje.h"
 using namespace std;
 
-Personaje::Personaje(const string& nombre, int vida, int energia)
-    : nombre(nombre), vida(vida), energia(energia), arma(nullptr) {} // Inicializamos sin arma al inicio
+Personaje::Personaje(int vida, int energia)
+    : vida(vida), energia(energia), arma(nullptr) {} // Inicializamos sin arma al inicio
 
 void Personaje::equiparArma(const shared_ptr<Arma>& nuevaArma) {
     arma = nuevaArma;
@@ -17,4 +17,5 @@ void Personaje::recibirDano(int dano) {
 
 int Personaje::getVida(){ return vida; }
 int Personaje::getEnergia(){ return energia; }
-string Personaje::getNombre(){ return nombre; }
+
+

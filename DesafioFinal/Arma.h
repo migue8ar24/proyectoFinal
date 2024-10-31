@@ -11,9 +11,11 @@ private:
 
 public:
     Arma(const string& nombre, int dano, int alcance); //constructor
-    int getDano();
-    int getAlcance();
-    string getNombre();
+    virtual ~Arma() = default;
+
+    virtual int getDano();
+    virtual int getAlcance();
+    virtual string getNombre();
 };
 
 
