@@ -18,11 +18,11 @@ SOURCES += \
     Juego.cpp \
     Nerd.cpp \
     Personaje.cpp \
-    Piedra.cpp \
     Secuaz.cpp \
     Tenedor.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    puno.cpp
 
 HEADERS += \
     Alcalde.h \
@@ -34,10 +34,10 @@ HEADERS += \
     Juego.h \
     Nerd.h \
     Personaje.h \
-    Piedra.h \
     Secuaz.h \
     Tenedor.h \
-    mainwindow.h
+    mainwindow.h \
+    puno.h
 
 FORMS += \
     mainwindow.ui

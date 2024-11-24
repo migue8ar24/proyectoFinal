@@ -1,9 +1,15 @@
 #ifndef ARMA_H
 #define ARMA_H
 #include <string>
+#include <QObject>
+#include <QGraphicsItem>
+#include <QMainWindow>
+
+
 using namespace std;
 
-class Arma {
+class Arma:public QObject  {
+    Q_OBJECT
 private:
     string nombre;
     int dano;
@@ -16,6 +22,9 @@ public:
     virtual int getDano();
     virtual int getAlcance();
     virtual string getNombre();
+
+    virtual QList<QGraphicsItem*> collidingItems() const = 0;
+    QGraphicsItem* touch();
 };
 
 
